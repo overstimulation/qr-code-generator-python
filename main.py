@@ -5,11 +5,149 @@ from PIL import Image
 
 
 def main() -> None:
+    print('Welcome to the QR Code Generator by @overstimulation')
+    print('This script will guide you through creating a custom QR code.')
+    print('First, choose the type of QR code you want to create:')
+    print('0. Text')
+    print('1. URL')
+    print('2. Wi-Fi Network')
+    print('3. Contact (vCard)')
+    print('4. Email')
+    print('5. SMS')
+    print('6. Whatsapp Message')
+    print('7. Phone Number')
+    print('8. Location')
+    print('9. Event (iCalendar)')
+    print('Please enter the number corresponding to your choice (1-9):')
+    choice = input().strip()
+    while choice not in [str(i) for i in range(1, 10)]:
+        print('Invalid choice. Please enter a number between 1 and 9:')
+        choice = input().strip()
+
     # Data to encode in the QR code (prompt user until valid input)
-    data_to_encode = ''
-    while not data_to_encode.strip():
-        print('Enter the data to encode in the QR code:')
-        data_to_encode = input().strip()
+    match choice:
+        case '0':
+            print('You chose Text. Enter the text to encode in the QR code:')
+            data_to_encode = input().strip()
+            while not data_to_encode.strip():
+                print('Enter the text to encode in the QR code:')
+                data_to_encode = input().strip()
+        case '1':
+            print('You chose URL. Enter the URL to encode in the QR code:')
+            data_to_encode = input().strip()
+            while not data_to_encode.strip():
+                print('Enter the text to encode in the QR code:')
+                data_to_encode = input().strip()
+            if not data_to_encode.startswith(('http://', 'https://')):
+                print('Warning: URL should start with "http://" or "https://". Adding "https://" by default.')
+                data_to_encode = 'https://' + data_to_encode
+        case '2':
+            print('You chose Wi-Fi Network. Enter the following details:')
+            ssid = input('SSID (Network Name): ').strip()
+            while not ssid:
+                print('SSID cannot be empty. Please enter the Network Name:')
+                ssid = input('SSID (Network Name): ').strip()
+            password = input('Password: ').strip()
+            encryption = input('Encryption (WPA/WPA2/WEP/None): ').strip().upper()
+            while encryption not in ['WPA', 'WPA2', 'WEP', 'NONE']:
+                print('Invalid encryption type. Please enter WPA, WPA2, WEP, or None:')
+                encryption = input('Encryption (WPA/WPA2/WEP/None): ').strip().upper()
+            data_to_encode = f'WIFI:S:{ssid};T:{encryption};P:{password};H:false;'
+        case '3':
+            print('You chose Contact (vCard). Enter the following details:')
+            name = input('Name: ').strip()
+            while not name:
+                print('Name cannot be empty. Please enter the Name:')
+                name = input('Name: ').strip()
+            email = input('Email (optional): ').strip()
+            phone = input('Phone (optional): ').strip()
+            address = input('Address (optional): ').strip()
+            data_to_encode = f'BEGIN:VCARD\nVERSION:3.0\nFN:{name}\n'
+            if email:
+                data_to_encode += f'EMAIL:{email}\n'
+            if phone:
+                data_to_encode += f'TEL:{phone}\n'
+            if address:
+                data_to_encode += f'ADR:{address}\n'
+            data_to_encode += 'END:VCARD'
+        case '4':
+            print('You chose Email. Enter the following details:')
+            email = input('Email Address: ').strip()
+            while not email:
+                print('Email Address cannot be empty. Please enter the Email Address:')
+                email = input('Email Address: ').strip()
+            subject = input('Subject (optional): ').strip()
+            body = input('Body (optional): ').strip()
+            data_to_encode = f'MAILTO:{email}'
+            if subject or body:
+                data_to_encode += '?'
+                if subject:
+                    data_to_encode += f'SUBJECT={subject}'
+                if body:
+                    if subject:
+                        data_to_encode += '&'
+                    data_to_encode += f'BODY={body}'
+        case '5':
+            print('You chose SMS. Enter the following details:')
+            phone_number = input('Phone Number: ').strip()
+            while not phone_number:
+                print('Phone Number cannot be empty. Please enter the Phone Number:')
+                phone_number = input('Phone Number: ').strip()
+            message = input('Message (optional): ').strip()
+            data_to_encode = f'SMS:{phone_number}'
+            if message:
+                data_to_encode += f'?BODY={message}'
+        case '6':
+            print('You chose Whatsapp Message. Enter the following details:')
+            phone_number = input('Phone Number (with country code, e.g., +1234567890): ').strip()
+            while not phone_number:
+                print('Phone Number cannot be empty. Please enter the Phone Number (with country code):')
+                phone_number = input('Phone Number (with country code, e.g., +1234567890): ').strip()
+            message = input('Message: ').strip()
+            while not message:
+                print('Message cannot be empty. Please enter the Message:')
+                message = input('Message: ').strip()
+            data_to_encode = f'whatsapp://send?phone={phone_number}&text={message}'
+        case '7':
+            print('You chose Phone Number. Enter the phone number to encode in the QR code:')
+            data_to_encode = input().strip()
+            while not data_to_encode.strip():
+                print('Enter the phone number to encode in the QR code:')
+                data_to_encode = input().strip()
+            if not data_to_encode.startswith('tel:'):
+                data_to_encode = 'tel:' + data_to_encode
+        case '8':
+            print('You chose Location. Enter the following details:')
+            latitude = input('Latitude: ').strip()
+            while not latitude:
+                print('Latitude cannot be empty. Please enter the Latitude:')
+                latitude = input('Latitude: ').strip()
+            longitude = input('Longitude: ').strip()
+            while not longitude:
+                print('Longitude cannot be empty. Please enter the Longitude:')
+                longitude = input('Longitude: ').strip()
+            data_to_encode = f'geo:{latitude},{longitude}'
+        case '9':
+            print('You chose Event (iCalendar). Enter the following details:')
+            event_name = input('Event Name: ').strip()
+            while not event_name:
+                print('Event Name cannot be empty. Please enter the Event Name:')
+                event_name = input('Event Name: ').strip()
+            start_date = input('Start Date (YYYYMMDDTHHMMSS): ').strip()
+            while not start_date:
+                print('Start Date cannot be empty. Please enter the Start Date (YYYYMMDDTHHMMSS):')
+                start_date = input('Start Date (YYYYMMDDTHHMMSS): ').strip()
+            end_date = input('End Date (YYYYMMDDTHHMMSS, optional): ').strip()
+            location = input('Location (optional): ').strip()
+            description = input('Description (optional): ').strip()
+            data_to_encode = f'BEGIN:VEVENT\nSUMMARY:{event_name}\nDTSTART:{start_date}\n'
+            if end_date:
+                data_to_encode += f'DTEND:{end_date}\n'
+            if location:
+                data_to_encode += f'LOCATION:{location}\n'
+            if description:
+                data_to_encode += f'DESCRIPTION:{description}\n'
+            data_to_encode += 'END:VEVENT'
 
     # Custom logo (optional, prompt user for path)
     custom_logo = None
@@ -98,7 +236,7 @@ def main() -> None:
         back_color = input().strip() or back_color
 
     qr = qrcode.QRCode(
-        version=1,
+        version=None,
         error_correction=error_correction_level,
         box_size=box_size,
         border=border_size,
