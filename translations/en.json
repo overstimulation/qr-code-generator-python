@@ -233,6 +233,39 @@
   "language": {
     "label": "🌍 Language:",
     "help": "Select your preferred language"
+  },
+  "language_selected": "Language set to {lang}",
+  "cli": {
+    "welcome": "Welcome to the QR Code Generator",
+    "choose_type": "Choose the type of QR code you want to create:",
+    "enter_number": "Please enter the number (0-9): ",
+    "you_chose": "You chose {type}.",
+    "invalid_choice": "Invalid choice. Please select from: {choices}",
+    "field_required": "This field cannot be empty. Please try again.",
+    "default": "default",
+    "positive_integer_required": "Please enter a positive integer.",
+    "non_negative_integer_required": "Please enter a non-negative integer.",
+    "invalid_encryption": "Invalid encryption. Please enter WPA, WPA2, WEP, or None.",
+    "add_logo": "Do you want to add a custom logo?",
+    "enter_logo_path": "Enter logo image path (or empty for no logo):",
+    "invalid_path": "Invalid path. Please enter a valid image file path.",
+    "default_save_path": "Default save path",
+    "change_path": "Change it?",
+    "enter_save_path": "Enter new save path (with filename):",
+    "logo_detected": "Custom logo detected. Error correction set to H for better visibility.",
+    "default_error_correction": "Default error correction: L.",
+    "change_it": "Change it?",
+    "enter_error_correction": "Enter error correction level",
+    "default_box_size": "Default box size: 10.",
+    "enter_box_size": "Enter box size",
+    "default_border_size": "Default border size: 4.",
+    "enter_border_size": "Enter border size",
+    "default_colors": "Default colours - Fill: black, Back: white.",
+    "fill_color": "Fill colour (default: black):",
+    "back_color": "Back colour (default: white):",
+    "success": "QR code successfully saved to: {path}",
+    "generation_failed": "Failed to generate QR code.",
+    "cancelled": "Operation cancelled by user.",
+    "error_occurred": "An error occurred: {error}"
   }
 }
-
