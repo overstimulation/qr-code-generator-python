@@ -1,0 +1,238 @@
+{
+  "app": {
+    "title": "📱 QR Code Generator",
+    "subtitle": "Create beautiful, customised QR codes in seconds"
+  },
+  "qr_types": {
+    "choose_type": "🎯 Choose QR Code Type",
+    "text": {
+      "title": "Text",
+      "desc": "Plain text message"
+    },
+    "url": {
+      "title": "URL",
+      "desc": "Website link"
+    },
+    "wifi": {
+      "title": "Wi-Fi Network",
+      "desc": "Wi-Fi credentials"
+    },
+    "contact": {
+      "title": "Contact",
+      "desc": "vCard contact info"
+    },
+    "email": {
+      "title": "Email",
+      "desc": "Email address"
+    },
+    "sms": {
+      "title": "SMS",
+      "desc": "Text message"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "desc": "WhatsApp message"
+    },
+    "phone": {
+      "title": "Phone",
+      "desc": "Phone number"
+    },
+    "location": {
+      "title": "Location",
+      "desc": "GPS coordinates"
+    },
+    "event": {
+      "title": "Event",
+      "desc": "Calendar event"
+    }
+  },
+  "inputs": {
+    "text": {
+      "label": "Enter text:",
+      "help": "The text to encode in the QR code"
+    },
+    "url": {
+      "label": "Enter URL:",
+      "help": "Website URL (http:// will be added if missing)"
+    },
+    "wifi": {
+      "ssid": {
+        "label": "Network Name (SSID):",
+        "help": "Wi-Fi network name"
+      },
+      "password": {
+        "label": "Password:",
+        "help": "Wi-Fi password"
+      },
+      "encryption": {
+        "label": "Encryption Type:",
+        "help": "Wi-Fi security type"
+      }
+    },
+    "contact": {
+      "name": {
+        "label": "Name:*",
+        "help": "Contact name (required)"
+      },
+      "email": {
+        "label": "Email:",
+        "help": "Email address (optional)"
+      },
+      "phone": {
+        "label": "Phone:",
+        "help": "Phone number (optional)"
+      },
+      "address": {
+        "label": "Address:",
+        "help": "Physical address (optional)"
+      }
+    },
+    "email": {
+      "email": {
+        "label": "Email Address:*",
+        "help": "Recipient email address"
+      },
+      "subject": {
+        "label": "Subject:",
+        "help": "Email subject (optional)"
+      },
+      "body": {
+        "label": "Body:",
+        "help": "Email body (optional)"
+      }
+    },
+    "sms": {
+      "phone": {
+        "label": "Phone Number:*",
+        "help": "Recipient phone number"
+      },
+      "message": {
+        "label": "Message:",
+        "help": "SMS message (optional)"
+      }
+    },
+    "whatsapp": {
+      "phone": {
+        "label": "Phone Number:*",
+        "help": "Phone number with country code (e.g., +1234567890)"
+      },
+      "message": {
+        "label": "Message:*",
+        "help": "WhatsApp message"
+      }
+    },
+    "phone": {
+      "phone": {
+        "label": "Phone Number:*",
+        "help": "Phone number to dial"
+      }
+    },
+    "location": {
+      "latitude": {
+        "label": "Latitude:*",
+        "help": "Geographic latitude"
+      },
+      "longitude": {
+        "label": "Longitude:*",
+        "help": "Geographic longitude"
+      }
+    },
+    "event": {
+      "name": {
+        "label": "Event Name:*",
+        "help": "Name of the event"
+      },
+      "start_date": {
+        "label": "Start Date:*",
+        "help": "Format: YYYYMMDDTHHMMSS (e.g., 20240101T120000)"
+      },
+      "end_date": {
+        "label": "End Date:",
+        "help": "Format: YYYYMMDDTHHMMSS (optional)"
+      },
+      "location": {
+        "label": "Location:",
+        "help": "Event location (optional)"
+      },
+      "description": {
+        "label": "Description:",
+        "help": "Event description (optional)"
+      }
+    }
+  },
+  "customisation": {
+    "title": "🎨 Customisation Options",
+    "logo": {
+      "label": "Upload Logo (Optional)",
+      "help": "Add a custom logo to the centre of your QR code"
+    },
+    "design": {
+      "title": "🖼️ Design",
+      "fill_color": {
+        "label": "QR Code Colour:",
+        "help": "Colour of the QR code squares"
+      },
+      "back_color": {
+        "label": "Background Colour:",
+        "help": "Background colour of the QR code"
+      }
+    },
+    "settings": {
+      "title": "⚙️ Settings",
+      "error_correction": {
+        "label": "Error Correction Level:",
+        "help": "Higher levels can recover from more damage",
+        "logo_info": "🔒 Error correction set to H for logo visibility"
+      },
+      "box_size": {
+        "label": "Box Size:",
+        "help": "Size of each QR code box in pixels"
+      },
+      "border_size": {
+        "label": "Border Size:",
+        "help": "Border width around the QR code"
+      }
+    },
+    "filename": {
+      "label": "Filename:",
+      "help": "Name for the downloaded file"
+    }
+  },
+  "generation": {
+    "title": "🎯 Preview & Generate",
+    "button": "🚀 Generate QR Code",
+    "button_help": "Click to create your QR code",
+    "generating": "🔄 Generating your QR code...",
+    "success": "✅ QR Code generated successfully!",
+    "error": "❌ Failed to generate QR code. Please check your inputs.",
+    "download": "📥 Download QR Code",
+    "image_caption": "✨ Your Generated QR Code"
+  },
+  "validation": {
+    "required_fields": "Please fill in required fields: {fields}"
+  },
+  "tips": {
+    "title": "💡 Quick Tips",
+    "usage_title": "📋 Usage Guidelines",
+    "current_type": "Current Type:",
+    "pro_tips": "💡 Pro Tips:",
+    "pro_tips_content": [
+      "Higher error correction = better logo compatibility",
+      "Larger box sizes = bigger QR codes",
+      "High contrast colours scan better",
+      "Always test before using!"
+    ],
+    "design_tips": "🎨 Design Tips:",
+    "design_tips_content": [
+      "Keep logos small (< 30% of QR size)",
+      "Use PNG logos for transparency",
+      "Dark QR on light background works best"
+    ]
+  },
+  "details_title": "📝 {type} Details",
+  "language": {
+    "label": "🌍 Language:",
+    "help": "Select your preferred language"
+  }
+}
+

@@ -1,0 +1,237 @@
+{
+  "app": {
+    "title": "📱 Generator Kodów QR",
+    "subtitle": "Twórz piękne, spersonalizowane kody QR w sekundy"
+  },
+  "qr_types": {
+    "choose_type": "🎯 Wybierz rodzaj kodu QR",
+    "text": {
+      "title": "Tekst",
+      "desc": "Zwykły tekst"
+    },
+    "url": {
+      "title": "Strona",
+      "desc": "Link internetowy"
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "desc": "Dane sieci Wi-Fi"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "desc": "Wizytówka vCard"
+    },
+    "email": {
+      "title": "E-mail",
+      "desc": "Adres e-mail"
+    },
+    "sms": {
+      "title": "SMS",
+      "desc": "Wiadomość SMS"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "desc": "Wiadomość WhatsApp"
+    },
+    "phone": {
+      "title": "Telefon",
+      "desc": "Numer telefonu"
+    },
+    "location": {
+      "title": "Lokalizacja",
+      "desc": "Współrzędne GPS"
+    },
+    "event": {
+      "title": "Wydarzenie",
+      "desc": "Wydarzenie w kalendarzu"
+    }
+  },
+  "inputs": {
+    "text": {
+      "label": "Wpisz tekst:",
+      "help": "Tekst do umieszczenia w kodzie QR"
+    },
+    "url": {
+      "label": "Wpisz adres strony:",
+      "help": "Adres internetowy (http:// zostanie dodane automatycznie)"
+    },
+    "wifi": {
+      "ssid": {
+        "label": "Nazwa sieci (SSID):",
+        "help": "Nazwa sieci bezprzewodowej"
+      },
+      "password": {
+        "label": "Hasło:",
+        "help": "Hasło do sieci Wi-Fi"
+      },
+      "encryption": {
+        "label": "Typ zabezpieczenia:",
+        "help": "Rodzaj szyfrowania sieci"
+      }
+    },
+    "contact": {
+      "name": {
+        "label": "Imię i nazwisko:*",
+        "help": "Nazwa kontaktu (wymagane)"
+      },
+      "email": {
+        "label": "E-mail:",
+        "help": "Adres e-mail (opcjonalnie)"
+      },
+      "phone": {
+        "label": "Telefon:",
+        "help": "Numer telefonu (opcjonalnie)"
+      },
+      "address": {
+        "label": "Adres:",
+        "help": "Adres zamieszkania (opcjonalnie)"
+      }
+    },
+    "email": {
+      "email": {
+        "label": "Adres e-mail:*",
+        "help": "Adres odbiorcy wiadomości"
+      },
+      "subject": {
+        "label": "Temat:",
+        "help": "Temat wiadomości (opcjonalnie)"
+      },
+      "body": {
+        "label": "Treść:",
+        "help": "Treść wiadomości (opcjonalnie)"
+      }
+    },
+    "sms": {
+      "phone": {
+        "label": "Numer telefonu:*",
+        "help": "Numer odbiorcy SMS"
+      },
+      "message": {
+        "label": "Wiadomość:",
+        "help": "Treść SMS (opcjonalnie)"
+      }
+    },
+    "whatsapp": {
+      "phone": {
+        "label": "Numer telefonu:*",
+        "help": "Numer z kodem kraju (np. +48123456789)"
+      },
+      "message": {
+        "label": "Wiadomość:*",
+        "help": "Treść wiadomości WhatsApp"
+      }
+    },
+    "phone": {
+      "phone": {
+        "label": "Numer telefonu:*",
+        "help": "Numer do połączenia"
+      }
+    },
+    "location": {
+      "latitude": {
+        "label": "Szerokość geograficzna:*",
+        "help": "Współrzędna północ-południe"
+      },
+      "longitude": {
+        "label": "Długość geograficzna:*",
+        "help": "Współrzędna wschód-zachód"
+      }
+    },
+    "event": {
+      "name": {
+        "label": "Nazwa wydarzenia:*",
+        "help": "Tytuł wydarzenia"
+      },
+      "start_date": {
+        "label": "Data rozpoczęcia:*",
+        "help": "Format: RRRRMMDDTGGMMSS (np. 20240101T120000)"
+      },
+      "end_date": {
+        "label": "Data zakończenia:",
+        "help": "Format: RRRRMMDDTGGMMSS (opcjonalnie)"
+      },
+      "location": {
+        "label": "Miejsce:",
+        "help": "Lokalizacja wydarzenia (opcjonalnie)"
+      },
+      "description": {
+        "label": "Opis:",
+        "help": "Dodatkowe informacje (opcjonalnie)"
+      }
+    }
+  },
+  "customisation": {
+    "title": "🎨 Opcje dostosowania",
+    "logo": {
+      "label": "Dodaj logo (opcjonalnie)",
+      "help": "Umieść własne logo w centrum kodu QR"
+    },
+    "design": {
+      "title": "🖼️ Wygląd",
+      "fill_color": {
+        "label": "Kolor kodu:",
+        "help": "Kolor elementów kodu QR"
+      },
+      "back_color": {
+        "label": "Kolor tła:",
+        "help": "Kolor tła kodu QR"
+      }
+    },
+    "settings": {
+      "title": "⚙️ Ustawienia",
+      "error_correction": {
+        "label": "Poziom korekcji błędów:",
+        "help": "Wyższe poziomy pozwalają na odczyt uszkodzonych kodów",
+        "logo_info": "🔒 Korekcja ustawiona na H ze względu na logo"
+      },
+      "box_size": {
+        "label": "Rozmiar elementu:",
+        "help": "Wielkość pojedynczego elementu w pikselach"
+      },
+      "border_size": {
+        "label": "Szerokość ramki:",
+        "help": "Grubość białej ramki wokół kodu"
+      }
+    },
+    "filename": {
+      "label": "Nazwa pliku:",
+      "help": "Nazwa pliku do pobrania"
+    }
+  },
+  "generation": {
+    "title": "🎯 Podgląd i generowanie",
+    "button": "🚀 Wygeneruj kod QR",
+    "button_help": "Kliknij, aby utworzyć kod QR",
+    "generating": "🔄 Tworzenie kodu QR...",
+    "success": "✅ Kod QR został pomyślnie utworzony!",
+    "error": "❌ Nie udało się utworzyć kodu QR. Sprawdź wprowadzone dane.",
+    "download": "📥 Pobierz kod QR",
+    "image_caption": "✨ Twój kod QR"
+  },
+  "validation": {
+    "required_fields": "Wypełnij wymagane pola: {fields}"
+  },
+  "tips": {
+    "title": "💡 Przydatne wskazówki",
+    "usage_title": "📋 Jak korzystać",
+    "current_type": "Wybrany typ:",
+    "pro_tips": "💡 Profesjonalne wskazówki:",
+    "pro_tips_content": [
+      "Wyższa korekcja błędów = lepsze działanie z logo",
+      "Większe elementy = większy kod QR",
+      "Kontrastowe kolory skanują się lepiej",
+      "Zawsze przetestuj przed użyciem!"
+    ],
+    "design_tips": "🎨 Wskazówki projektowe:",
+    "design_tips_content": [
+      "Logo powinno zajmować mniej niż 30% kodu",
+      "Używaj plików PNG dla przezroczystości",
+      "Ciemny kod na jasnym tle działa najlepiej"
+    ]
+  },
+  "details_title": "📝 Szczegóły - {type}",
+  "language": {
+    "label": "🌍 Język:",
+    "help": "Wybierz preferowany język interfejsu"
+  }
+}

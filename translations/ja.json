@@ -1,0 +1,237 @@
+{
+  "app": {
+    "title": "📱 QRコード生成ツール",
+    "subtitle": "美しいオリジナルQRコードを簡単作成"
+  },
+  "qr_types": {
+    "choose_type": "🎯 QRコードの種類を選択",
+    "text": {
+      "title": "テキスト",
+      "desc": "文字情報"
+    },
+    "url": {
+      "title": "ウェブサイト",
+      "desc": "リンク"
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "desc": "無線LAN設定"
+    },
+    "contact": {
+      "title": "連絡先",
+      "desc": "vCard情報"
+    },
+    "email": {
+      "title": "メール",
+      "desc": "メールアドレス"
+    },
+    "sms": {
+      "title": "SMS",
+      "desc": "ショートメール"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "desc": "メッセージ"
+    },
+    "phone": {
+      "title": "電話",
+      "desc": "電話番号"
+    },
+    "location": {
+      "title": "位置情報",
+      "desc": "GPS座標"
+    },
+    "event": {
+      "title": "イベント",
+      "desc": "カレンダー予定"
+    }
+  },
+  "inputs": {
+    "text": {
+      "label": "テキストを入力:",
+      "help": "QRコードに埋め込む文字情報"
+    },
+    "url": {
+      "label": "URLを入力:",
+      "help": "ウェブサイトのアドレス（http://は自動追加）"
+    },
+    "wifi": {
+      "ssid": {
+        "label": "ネットワーク名（SSID）:",
+        "help": "Wi-Fiのネットワーク名"
+      },
+      "password": {
+        "label": "パスワード:",
+        "help": "Wi-Fiのパスワード"
+      },
+      "encryption": {
+        "label": "暗号化方式:",
+        "help": "セキュリティの種類"
+      }
+    },
+    "contact": {
+      "name": {
+        "label": "お名前:*",
+        "help": "連絡先の名前（必須）"
+      },
+      "email": {
+        "label": "メールアドレス:",
+        "help": "メールアドレス（任意）"
+      },
+      "phone": {
+        "label": "電話番号:",
+        "help": "電話番号（任意）"
+      },
+      "address": {
+        "label": "住所:",
+        "help": "住所（任意）"
+      }
+    },
+    "email": {
+      "email": {
+        "label": "メールアドレス:*",
+        "help": "送信先のメールアドレス"
+      },
+      "subject": {
+        "label": "件名:",
+        "help": "メールの件名（任意）"
+      },
+      "body": {
+        "label": "本文:",
+        "help": "メールの本文（任意）"
+      }
+    },
+    "sms": {
+      "phone": {
+        "label": "電話番号:*",
+        "help": "送信先の電話番号"
+      },
+      "message": {
+        "label": "メッセージ:",
+        "help": "SMSの内容（任意）"
+      }
+    },
+    "whatsapp": {
+      "phone": {
+        "label": "電話番号:*",
+        "help": "国番号付きの電話番号（例：+81123456789）"
+      },
+      "message": {
+        "label": "メッセージ:*",
+        "help": "WhatsAppメッセージの内容"
+      }
+    },
+    "phone": {
+      "phone": {
+        "label": "電話番号:*",
+        "help": "発信する電話番号"
+      }
+    },
+    "location": {
+      "latitude": {
+        "label": "緯度:*",
+        "help": "北緯・南緯の座標"
+      },
+      "longitude": {
+        "label": "経度:*",
+        "help": "東経・西経の座標"
+      }
+    },
+    "event": {
+      "name": {
+        "label": "イベント名:*",
+        "help": "予定のタイトル"
+      },
+      "start_date": {
+        "label": "開始日時:*",
+        "help": "形式：YYYYMMDDTHHMMSS（例：20240101T120000）"
+      },
+      "end_date": {
+        "label": "終了日時:",
+        "help": "形式：YYYYMMDDTHHMMSS（任意）"
+      },
+      "location": {
+        "label": "場所:",
+        "help": "開催場所（任意）"
+      },
+      "description": {
+        "label": "説明:",
+        "help": "詳細説明（任意）"
+      }
+    }
+  },
+  "customisation": {
+    "title": "🎨 カスタマイズ設定",
+    "logo": {
+      "label": "ロゴ画像（任意）",
+      "help": "QRコードの中央に表示するロゴ"
+    },
+    "design": {
+      "title": "🖼️ デザイン",
+      "fill_color": {
+        "label": "QRコードの色:",
+        "help": "QRコード本体の色"
+      },
+      "back_color": {
+        "label": "背景色:",
+        "help": "QRコードの背景色"
+      }
+    },
+    "settings": {
+      "title": "⚙️ 詳細設定",
+      "error_correction": {
+        "label": "エラー訂正レベル:",
+        "help": "レベルが高いほど読み取りエラーに強くなります",
+        "logo_info": "🔒 ロゴ表示のためエラー訂正レベルをHに設定"
+      },
+      "box_size": {
+        "label": "ドットサイズ:",
+        "help": "QRコードの各ドットのサイズ（ピクセル）"
+      },
+      "border_size": {
+        "label": "余白サイズ:",
+        "help": "QRコード周囲の余白の幅"
+      }
+    },
+    "filename": {
+      "label": "ファイル名:",
+      "help": "保存するファイルの名前"
+    }
+  },
+  "generation": {
+    "title": "🎯 プレビュー・生成",
+    "button": "🚀 QRコードを生成",
+    "button_help": "クリックしてQRコードを作成",
+    "generating": "🔄 QRコードを生成中...",
+    "success": "✅ QRコードが正常に作成されました！",
+    "error": "❌ QRコードの生成に失敗しました。入力内容をご確認ください。",
+    "download": "📥 QRコードをダウンロード",
+    "image_caption": "✨ 作成されたQRコード"
+  },
+  "validation": {
+    "required_fields": "必須項目を入力してください：{fields}"
+  },
+  "tips": {
+    "title": "💡 使い方のコツ",
+    "usage_title": "📋 利用ガイド",
+    "current_type": "選択中のタイプ：",
+    "pro_tips": "💡 プロのコツ：",
+    "pro_tips_content": [
+      "高いエラー訂正レベル＝ロゴ使用時に最適",
+      "大きなドットサイズ＝大きなQRコード",
+      "コントラストの高い色＝読み取りやすい",
+      "使用前に必ずテストしましょう！"
+    ],
+    "design_tips": "🎨 デザインのコツ：",
+    "design_tips_content": [
+      "ロゴはQRコードの30%以下のサイズに",
+      "透明背景にはPNG形式を使用",
+      "明るい背景に暗いQRコードが基本"
+    ]
+  },
+  "details_title": "📝 {type}の設定",
+  "language": {
+    "label": "🌍 言語:",
+    "help": "表示言語を選択してください"
+  }
+}
