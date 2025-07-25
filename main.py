@@ -20,8 +20,8 @@ def main() -> None:
     print('9. Event (iCalendar)')
     print('Please enter the number corresponding to your choice (1-9):')
     choice = input().strip()
-    while choice not in [str(i) for i in range(1, 10)]:
-        print('Invalid choice. Please enter a number between 1 and 9:')
+    while choice not in [str(i) for i in range(0, 10)]:
+        print('Invalid choice. Please enter a number between 0 and 9:')
         choice = input().strip()
 
     # Data to encode in the QR code (prompt user until valid input)
